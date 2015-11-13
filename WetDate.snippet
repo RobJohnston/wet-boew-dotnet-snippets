@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>WET BOEW</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WetDate</Title>
+      <Author>Rob Johnston</Author>
+      <Description>WET-BOEW date</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>WbDate</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Label1</ID>
+          <ToolTip>The field label</ToolTip>
+          <Default>Label1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TextBox1</ID>
+          <ToolTip>The identifier of the field</ToolTip>
+          <Default>TextBox1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>FieldName</ID>
+          <ToolTip>The name of the field</ToolTip>
+          <Default>Date</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>CompareValidator1</ID>
+          <ToolTip>The compare validator of the field</ToolTip>
+          <Default>CompareValidator1</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html" Delimiter="$"><![CDATA[<div class="form-group">
+    <asp:Label ID="$Label1$" runat="server" AssociatedControlID="$TextBox1$">
+        <span class="field-name">$FieldName$</span>
+        <span class="datepicker-format"> (YYYY-MM-DD)</span>
+    </asp:Label>
+    <asp:CompareValidator ID="$CompareValidator1$" runat="server" 
+        ControlToValidate="$TextBox1$"
+        CssClass="label label-danger"
+        CultureInvariantValues="true"
+        EnableClientScript="false"
+        ErrorMessage="$FieldName$ - Please enter a valid date."
+        Operator="DataTypeCheck"
+        Text="Error: Please enter a valid date."
+        Type="Date" />
+    <asp:TextBox ID="$TextBox1$" runat="server" CssClass="form-control" type="date" data-rule-dateISO="true" />
+</div>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

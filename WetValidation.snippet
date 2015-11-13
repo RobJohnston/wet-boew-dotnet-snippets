@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>WET BOEW</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WetValidation</Title>
+      <Author>Rob Johnston</Author>
+      <Description>WET-BOEW validation summary</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>WbValidation</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ValidationSummary1</ID>
+          <ToolTip>ValidationSummary1</ToolTip>
+          <Default>ValidationSummary1</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html" Delimiter="$"><![CDATA[<asp:ValidationSummary ID="$ValidationSummary1$" runat="server"
+    CssClass="alert alert-danger"
+    DisplayMode="BulletList"
+    EnableClientScript="False"
+    Font-Bold="false"
+    HeaderText="<h2>The form could not be submitted because the following errors were found:</h2>" 
+    ShowSummary="true" 
+    TabIndex="-1" />]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

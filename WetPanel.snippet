@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>WET BOEW</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WetPanel</Title>
+      <Author>Rob Johnston</Author>
+      <Description>WET-BOEW Panel</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>WbPanel</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>PanelTitle</ID>
+          <ToolTip>Panel title</ToolTip>
+          <Default>Panel title</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>PanelContent</ID>
+          <ToolTip>Panel content</ToolTip>
+          <Default>Panel content</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>PanelFooter</ID>
+          <ToolTip>Panel footer</ToolTip>
+          <Default>Panel footer</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html" Delimiter="$"><![CDATA[<section class="panel panel-default">
+	<header class="panel-heading">
+		<h3 class="panel-title">$PanelTitle$</h3>
+	</header>
+	<asp:Panel ID="Panel1" runat="server" CssClass="panel-body">
+		<p>$PanelContent$</p>
+	</asp:Panel>
+    <footer class="panel-footer">$PanelFooter$</footer>
+</section>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

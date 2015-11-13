@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>WET BOEW</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WetNumber</Title>
+      <Author>Rob Johnston</Author>
+      <Description>WET-BOEW number</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>WbNumber</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Label1</ID>
+          <ToolTip>The field label</ToolTip>
+          <Default>Label1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TextBox1</ID>
+          <ToolTip>The identifier of the field</ToolTip>
+          <Default>TextBox1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>FieldName</ID>
+          <ToolTip>The name of the field</ToolTip>
+          <Default>Numeric</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>RequiredFieldValidator1</ID>
+          <ToolTip>The required validator of the field</ToolTip>
+          <Default>RequiredFieldValidator1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>CompareValidator1</ID>
+          <ToolTip>The compare validator of the field</ToolTip>
+          <Default>CompareValidator1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>min</ID>
+          <ToolTip>min value</ToolTip>
+          <Default>5</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>max</ID>
+          <ToolTip>max value</ToolTip>
+          <Default>40</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html" Delimiter="$"><![CDATA[<div class="form-group">
+    <asp:Label ID="$Label1$" runat="server" AssociatedControlID="$TextBox1$">
+        <span class="field-name">$FieldName$</span> (between $min$ and $max$)
+    </asp:Label>
+    <asp:CompareValidator ID="$CompareValidator1$" runat="server" 
+        ControlToValidate="$TextBox1$"
+        CssClass="label label-danger"
+        CultureInvariantValues="true"
+        EnableClientScript="false"
+        ErrorMessage="$FieldName$ - Please enter a number."
+        Operator="DataTypeCheck"
+        Text="Error: Please enter a number."
+        Type="Double" />
+    <asp:RangeValidator ID="RangeValidator1" runat="server"
+        ControlToValidate="$TextBox1$"
+        CssClass="label label-danger"
+        EnableClientScript="false"
+        ErrorMessage="Error: $FieldName$ - This value must be greater than or equal to $min$ and less than or equal to $max$."
+        Text="Error: This value must be greater than or equal to $min$ and less than or equal to $max$." />
+    <asp:TextBox ID="$TextBox1$" runat="server" CssClass="form-control" type="number" $min$="$min$" $max$="$max$" />
+</div>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

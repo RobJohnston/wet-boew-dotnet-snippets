@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Keywords>
+        <Keyword>WET BOEW</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>WetTextBox</Title>
+      <Author>Rob Johnston</Author>
+      <Description>WET-BOEW textbox</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>WbText</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Label1</ID>
+          <ToolTip>The field label</ToolTip>
+          <Default>Label1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TextBox1</ID>
+          <ToolTip>The identifier of the field</ToolTip>
+          <Default>TextBox1</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>FieldName</ID>
+          <ToolTip>The name of the field</ToolTip>
+          <Default>FieldName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="html" Delimiter="$"><![CDATA[<div class="form-group">
+    <asp:Label ID="$Label1$" runat="server" AssociatedControlID="$TextBox1$">
+        <span class="field-name">$FieldName$</span>
+    </asp:Label>
+    <asp:TextBox ID="$TextBox1$" runat="server" CssClass="form-control" type="text" />
+</div>]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
